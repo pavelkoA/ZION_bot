@@ -3,7 +3,7 @@ from lexicon.lexicon_ru import forbidden_words
 
 def forbid_wrds(message: Message) -> bool:
     for word in forbidden_words:
-        if word in message.text:
+        if word in message.text.lower():
             return True
     return False
 
