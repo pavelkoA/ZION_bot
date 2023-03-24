@@ -19,11 +19,11 @@ async def process_popivu_commands(message: Message):
                               type='regular',
                               is_anonymous=False)
 
-# #Хендлер для команды hb, поздравляет пользователя с днем рождения
-# @router.message(Command(commands='hb'))
-# async def command_happy_bd(message: Message):
-#     hb = str(happy_bd())
-#     try:
-#         await message.answer(text=f'Дорогой {message.text.split()[1]} {hb}')
-#     except IndexError:
-#         await message.answer(text=f'Дорогой, кто там сегодня? {hb}')
+#Хендлер для команды hb, поздравляет пользователя с днем рождения
+@router.message(Command(commands='hb'))
+async def command_happy_bd(message: Message):
+    hb = str(happy_bd())
+    try:
+        await message.answer(text=f'Дорогой {message.text.split()[1]} {hb}')
+    except IndexError:
+        await message.answer(text=f'Дорогой, кто там сегодня? {hb}')
