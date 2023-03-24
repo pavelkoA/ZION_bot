@@ -17,7 +17,7 @@ async def main():
 
     logger.info('Starting Bot')
 
-    bot: Bot = Bot(token=config.tgbot.token, parse_mode='HTML')
+    bot: Bot = Bot(token=config.tgbot.token)
     dp: Dispatcher = Dispatcher()
 
     dp.include_router(user_handlers.router)
